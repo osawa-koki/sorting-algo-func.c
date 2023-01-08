@@ -10,6 +10,7 @@
 #include "../include/bucket_sort.h"
 #include "../include/shell_sort.h"
 #include "../include/comb_sort.h"
+#include "../include/cycle_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -190,6 +191,23 @@ int main() {
   // 配列を表示する
   for (int i = 0; i < size; i++) {
     printf("%d ", combSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Cycle Sort *****\n");
+
+  // 配列のコピー
+  int cycleSort_array[size];
+  memcpy(cycleSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  cycleSort(cycleSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", cycleSort_array[i]);
   }
   printf("\n");
 
