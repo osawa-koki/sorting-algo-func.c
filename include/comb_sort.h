@@ -6,7 +6,7 @@ void combSort(int *array, int size) {
   bool swapped = true;
   while (gap > 1 || swapped) {
     if (gap > 1) {
-      gap = (int)(gap / 1.247330950103979);
+      gap = (int)(gap / 1.3);
     }
     swapped = false;
     for (int i = 0; i + gap < size; i++) {
