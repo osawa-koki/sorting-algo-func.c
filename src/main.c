@@ -13,6 +13,7 @@
 #include "../include/cycle_sort.h"
 #include "../include/pancake_sort.h"
 #include "../include/gnome_sort.h"
+#include "../include/stooge_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -244,6 +245,23 @@ int main() {
   // 配列を表示する
   for (int i = 0; i < size; i++) {
     printf("%d ", gnomeSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Stooge Sort *****\n");
+
+  // 配列のコピー
+  int stoogeSort_array[size];
+  memcpy(stoogeSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  stoogeSort(stoogeSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", stoogeSort_array[i]);
   }
   printf("\n");
 
