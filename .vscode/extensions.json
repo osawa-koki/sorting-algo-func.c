@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "ms-vscode.cpptools-extension-pack",
+    "davidanson.vscode-markdownlint",
+    "eamodio.gitlens",
+    "github.copilot",
+    "mhutchie.git-graph",
+    "editorconfig.editorconfig"
+  ]
+}
