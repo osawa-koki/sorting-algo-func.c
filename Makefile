@@ -4,7 +4,7 @@ OBJECTS = $(SOURCES:.c=.o)
 EXECUTABLE = main
 BUILD_DIR = build
 
-all: $(EXECUTABLE)
+all: $(BUILD_DIR) $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(OBJECTS) -o $(BUILD_DIR)/$@
@@ -14,3 +14,11 @@ $(EXECUTABLE): $(OBJECTS)
 
 clean:
 	rm -rf $(OBJECTS) $(BUILD_DIR)
+
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+
+.PHONY: $(BUILD_DIR)
+
+run: $(EXECUTABLE)
+	$(BUILD_DIR)/$(EXECUTABLE)
