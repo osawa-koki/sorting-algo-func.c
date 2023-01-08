@@ -3,6 +3,7 @@
 #include "../include/bubble_sort.h"
 #include "../include/selection_sort.h"
 #include "../include/insertion_sort.h"
+#include "../include/merge_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -64,6 +65,23 @@ int main() {
   // 配列を表示する
   for (int i = 0; i < size; i++) {
     printf("%d ", insertionSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Merge Sort *****\n");
+
+  // 配列のコピー
+  int mergeSort_array[size];
+  memcpy(mergeSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  mergeSort(mergeSort_array, 0, size - 1);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", mergeSort_array[i]);
   }
   printf("\n");
 
