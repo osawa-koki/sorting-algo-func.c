@@ -11,6 +11,7 @@
 #include "../include/shell_sort.h"
 #include "../include/comb_sort.h"
 #include "../include/cycle_sort.h"
+#include "../include/pancake_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -208,6 +209,23 @@ int main() {
   // 配列を表示する
   for (int i = 0; i < size; i++) {
     printf("%d ", cycleSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Pancake Sort *****\n");
+
+  // 配列のコピー
+  int pancakeSort_array[size];
+  memcpy(pancakeSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  pancakeSort(pancakeSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", pancakeSort_array[i]);
   }
   printf("\n");
 
