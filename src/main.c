@@ -16,6 +16,7 @@
 #include "../include/stooge_sort.h"
 #include "../include/pigeonhole_sort.h"
 #include "../include/odd-even_sort.h"
+#include "../include/cocktail_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -298,6 +299,23 @@ int main() {
   // 配列を表示する
   for (int i = 0; i < size; i++) {
     printf("%d ", oddEvenSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Cocktail Sort *****\n");
+
+  // 配列のコピー
+  int cocktailSort_array[size];
+  memcpy(cocktailSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  cocktailSort(cocktailSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", cocktailSort_array[i]);
   }
   printf("\n");
 
