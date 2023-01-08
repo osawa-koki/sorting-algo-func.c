@@ -18,6 +18,7 @@
 #include "../include/odd-even_sort.h"
 #include "../include/cocktail_sort.h"
 #include "../include/sleep_sort.h"
+#include "../include/strand_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -325,6 +326,23 @@ int main() {
   printf("***** Sleep Sort *****\n");
 
   printf("***** Not Implemented *****\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Strand Sort *****\n");
+
+  // 配列のコピー
+  int strandSort_array[size];
+  memcpy(strandSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  strandSort(strandSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", strandSort_array[i]);
+  }
+  printf("\n");
 
   // ===== ===== ===== ===== =====
 
