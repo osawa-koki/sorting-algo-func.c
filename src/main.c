@@ -17,6 +17,7 @@
 #include "../include/pigeonhole_sort.h"
 #include "../include/odd-even_sort.h"
 #include "../include/cocktail_sort.h"
+#include "../include/sleep_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -318,6 +319,12 @@ int main() {
     printf("%d ", cocktailSort_array[i]);
   }
   printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Sleep Sort *****\n");
+
+  printf("***** Not Implemented *****\n");
 
   // ===== ===== ===== ===== =====
 
