@@ -1,4 +1,5 @@
 
+// バブルソート
 void bubbleSort(int array[], int size) {
   // 配列の要素数分繰り返す
   for (int i = 0; i < size; i++) {
