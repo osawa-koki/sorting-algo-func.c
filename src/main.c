@@ -8,6 +8,7 @@
 #include "../include/heap_sort.h"
 #include "../include/counting_sort.h"
 #include "../include/bucket_sort.h"
+#include "../include/shell_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -154,6 +155,23 @@ int main() {
   // 配列を表示する
   for (int i = 0; i < size; i++) {
     printf("%d ", bucketSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Shell Sort *****\n");
+
+  // 配列のコピー
+  int shellSort_array[size];
+  memcpy(shellSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  shellSort(shellSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", shellSort_array[i]);
   }
   printf("\n");
 
