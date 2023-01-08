@@ -5,6 +5,7 @@
 #include "../include/insertion_sort.h"
 #include "../include/merge_sort.h"
 #include "../include/quick_sort.h"
+#include "../include/heap_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -100,6 +101,23 @@ int main() {
   // 配列を表示する
   for (int i = 0; i < size; i++) {
     printf("%d ", quickSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Heap Sort *****\n");
+
+  // 配列のコピー
+  int heapSort_array[size];
+  memcpy(heapSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  heapSort(heapSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", heapSort_array[i]);
   }
   printf("\n");
 
