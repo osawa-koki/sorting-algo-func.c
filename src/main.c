@@ -7,6 +7,7 @@
 #include "../include/quick_sort.h"
 #include "../include/heap_sort.h"
 #include "../include/counting_sort.h"
+#include "../include/bucket_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -136,6 +137,23 @@ int main() {
   // 配列を表示する
   for (int i = 0; i < size; i++) {
     printf("%d ", countingSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Bucket Sort *****\n");
+
+  // 配列のコピー
+  int bucketSort_array[size];
+  memcpy(bucketSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  bucketSort(bucketSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", bucketSort_array[i]);
   }
   printf("\n");
 
