@@ -14,6 +14,7 @@
 #include "../include/pancake_sort.h"
 #include "../include/gnome_sort.h"
 #include "../include/stooge_sort.h"
+#include "../include/pigeonhole_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -262,6 +263,23 @@ int main() {
   // 配列を表示する
   for (int i = 0; i < size; i++) {
     printf("%d ", stoogeSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Pigeonhole Sort *****\n");
+
+  // 配列のコピー
+  int pigeonholeSort_array[size];
+  memcpy(pigeonholeSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  pigeonholeSort(pigeonholeSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", pigeonholeSort_array[i]);
   }
   printf("\n");
 
