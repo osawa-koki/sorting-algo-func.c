@@ -9,6 +9,7 @@
 #include "../include/counting_sort.h"
 #include "../include/bucket_sort.h"
 #include "../include/shell_sort.h"
+#include "../include/comb_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -172,6 +173,23 @@ int main() {
   // 配列を表示する
   for (int i = 0; i < size; i++) {
     printf("%d ", shellSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Comb Sort *****\n");
+
+  // 配列のコピー
+  int combSort_array[size];
+  memcpy(combSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  combSort(combSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", combSort_array[i]);
   }
   printf("\n");
 
