@@ -12,6 +12,7 @@
 #include "../include/comb_sort.h"
 #include "../include/cycle_sort.h"
 #include "../include/pancake_sort.h"
+#include "../include/gnome_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -226,6 +227,23 @@ int main() {
   // 配列を表示する
   for (int i = 0; i < size; i++) {
     printf("%d ", pancakeSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Gnome Sort *****\n");
+
+  // 配列のコピー
+  int gnomeSort_array[size];
+  memcpy(gnomeSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  gnomeSort(gnomeSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", gnomeSort_array[i]);
   }
   printf("\n");
 
