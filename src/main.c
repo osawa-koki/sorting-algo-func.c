@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "../include/bubble_sort.h"
+#include "../include/selection_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -26,11 +27,29 @@ int main() {
   bubbleSort(bubbleSort_array, size);
 
   // 配列を表示する
-  printf("After: ");
   for (int i = 0; i < size; i++) {
     printf("%d ", bubbleSort_array[i]);
   }
   printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Selection Sort *****\n");
+
+  // 配列のコピー
+  int selectionSort_array[size];
+  memcpy(selectionSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  selectionSort(selectionSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", selectionSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
 
   return 0;
 }
