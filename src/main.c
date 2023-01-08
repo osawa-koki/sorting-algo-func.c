@@ -15,6 +15,7 @@
 #include "../include/gnome_sort.h"
 #include "../include/stooge_sort.h"
 #include "../include/pigeonhole_sort.h"
+#include "../include/odd-even_sort.h"
 
 int main() {
   // 配列を宣言する
@@ -280,6 +281,23 @@ int main() {
   // 配列を表示する
   for (int i = 0; i < size; i++) {
     printf("%d ", pigeonholeSort_array[i]);
+  }
+  printf("\n");
+
+  // ===== ===== ===== ===== =====
+
+  printf("***** Odd-Even Sort *****\n");
+
+  // 配列のコピー
+  int oddEvenSort_array[size];
+  memcpy(oddEvenSort_array, array, sizeof(array));
+
+  // 配列を昇順に並べる
+  oddevenSort(oddEvenSort_array, size);
+
+  // 配列を表示する
+  for (int i = 0; i < size; i++) {
+    printf("%d ", oddEvenSort_array[i]);
   }
   printf("\n");
 
